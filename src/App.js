@@ -17,7 +17,7 @@ class App extends Component {
       {
         id: 3,
         title: 'Prepare lunches',
-        completed: false
+        completed: true
       },
       {
         id: 4,
