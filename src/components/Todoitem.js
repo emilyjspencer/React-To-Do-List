@@ -4,18 +4,15 @@ import Todos from './Todos';
 
 export class TodoItem extends Component {
   getStyle = () => {
-    if(this.props.todo.completed) {
       return { 
-        textDecoration: 'line-through'
+        background: '#f3f3f3',
+        padding: '10px',
+        borderBottom: '1px #ccc dotted',
+        textDecoration: this.props.todo.completed ?
+        'line-through': 'none'
       }
-    } else {
-      return {
-        textDecoration: 'none'
-      }
-    }
-
-    
-  }
+    } 
+  
    
   render() {
     return (
@@ -25,6 +22,7 @@ export class TodoItem extends Component {
   )
   }
 }
+
 // PropTypes
 TodoItem.propTypes = {
   todo: PropTypes.object.isRequired
