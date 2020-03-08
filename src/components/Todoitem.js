@@ -5,7 +5,7 @@ import Todos from './Todos';
 export class TodoItem extends Component {
   getStyle = () => {
       return { 
-        background: '#f3f3f3',
+        background: '#ffcccc',
         padding: '10px',
         borderBottom: '1px #ccc dotted',
         textDecoration: this.props.todo.completed ?
@@ -17,7 +17,9 @@ export class TodoItem extends Component {
   render() {
     return (
     <div style={this.getStyle()}>
-      <p>{ this.props.todo.title }</p>
+      <p>
+        <input type="checkbox" />
+        { this.props.todo.title }</p>
     </div>
   )
   }
